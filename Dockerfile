@@ -1,7 +1,7 @@
 FROM debian:stretch
 
-ENV TERRAFORM_VERSION=0.11.0
-ENV TERRAFORM_SHA256SUM=402b4333792967986383670134bb52a8948115f83ab6bda35f57fa2c3c9e9279
+ENV TERRAFORM_VERSION=0.11.3
+ENV TERRAFORM_SHA256SUM=6b8a7b83954597d36bbed23913dd51bc253906c612a070a21db373eab71b277b
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -16,6 +16,6 @@ RUN apt-get update \
   && rm -f terraform_${TERRAFORM_VERSION}_* \
   && apt-get -y remove unzip curl \
   && apt-get -y autoremove \
-  && rm -rf /var/lib/apt/dists/*
+  && rm -rf /var/lib/apt/lists/*
 
 RUN terraform version
