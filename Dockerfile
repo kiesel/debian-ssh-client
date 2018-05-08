@@ -1,7 +1,7 @@
 FROM debian:stretch
 
 ENV TERRAFORM_VERSION=0.11.7
-ENV TERRAFORM_SHA256SUM=6b8a7b83954597d36bbed23913dd51bc253906c612a070a21db373eab71b277b
+ENV TERRAFORM_SHA256SUM=6b8ce67647a59b2a3f70199c304abca0ddec0e49fd060944c26f666298e23418
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
